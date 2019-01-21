@@ -10,7 +10,7 @@ docker push conradperes/multi-client:$SHA
 docker push conradperes/multi-server:$SHA
 docker push conradperes/multi-worker:$SHA
 
-kubectl apply -f k8s
+kubectl apply -f k8s 
 kubectl set image deployments/server-deployment server=conradperes/multi-server$SHA
 kubectl set image deployments/client-deploymet client=conradperes/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=conradperes/multi-worker:$SHA
